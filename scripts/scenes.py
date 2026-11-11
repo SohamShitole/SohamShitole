@@ -53,33 +53,34 @@ def terminal(totals, accounts, today):
         (True, "cat stack.txt"),
         (False, "TypeScript · React · Next.js · Postgres · LLM APIs"),
     ]
-    out, t, y, cw = [], 0.4, 76, 8.4
-    for i, (cmd, text) in enumerate(lines):
+    # CSS only: SMIL (<animate>/<set>) doesn't run in every browser when the SVG is shown as an <img>.
+    out, t, y = [], 0.4, 76
+    for cmd, text in lines:
         if cmd:
             dur = 0.04 * len(text) + 0.2
-            w = 22 + len(text) * cw
-            out.append(f'<clipPath id="c{i}"><rect x="40" y="{y - 15}" height="22" width="0">'
-                       f'<animate attributeName="width" from="0" to="{w:.0f}" begin="{t:.2f}s" dur="{dur:.2f}s" fill="freeze"/></rect></clipPath>'
-                       f'<text class="p" x="24" y="{y}">$</text><text class="c" x="40" y="{y}" clip-path="url(#c{i})">{text}</text>')
+            out.append(f'<text class="p" x="24" y="{y}">$</text><text class="c" x="40" y="{y}" '
+                       f'style="animation-delay:{t:.2f}s;animation-duration:{dur:.2f}s;animation-timing-function:steps({len(text)})">{text}</text>')
             t += dur + 0.25
         else:
-            out.append(f'<text class="o" x="40" y="{y}" opacity="0">{esc(text)}'
-                       f'<set attributeName="opacity" to="1" begin="{t:.2f}s" fill="freeze"/></text>')
+            out.append(f'<text class="o" x="40" y="{y}" style="animation-delay:{t:.2f}s">{esc(text)}</text>')
             t += 0.35
             y += 8
         y += 24
-    out.append(f'<text class="p" x="24" y="{y}" opacity="0">$<set attributeName="opacity" to="1" begin="{t:.2f}s" fill="freeze"/></text>'
-               f'<rect class="cur" x="40" y="{y - 13}" width="9" height="17" opacity="0">'
-               f'<set attributeName="opacity" to="1" begin="{t:.2f}s" fill="freeze"/></rect>')
+    out.append(f'<text class="p o" x="24" y="{y}" style="animation-delay:{t:.2f}s">$</text>'
+               f'<rect class="cur" x="40" y="{y - 13}" width="9" height="17" style="animation-delay:{t:.2f}s,{t:.2f}s"/>')
     height = y + 30
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="840" height="{height}" viewBox="0 0 840 {height}" role="img" aria-labelledby="tt td">
   <title id="tt">Terminal: about Soham</title>
   <desc id="td">{esc(" ".join(text for _, text in lines))}</desc>
   <style>
     text {{ font-family: {MONO}; font-size: 14px; }}
-    .p {{ fill: #3fb950; font-weight: 700; }} .c {{ fill: #e6edf3; }} .o {{ fill: #9198a1; }}
-    .cur {{ fill: #e6edf3; animation: blink 1s steps(1) infinite; }}
+    .p {{ fill: #3fb950; font-weight: 700; }} .c {{ fill: #e6edf3; animation: type 1s both; }}
+    .o {{ fill: #9198a1; animation: show .01s both; }} .p.o {{ fill: #3fb950; }}
+    .cur {{ fill: #e6edf3; animation: show .01s both, blink 1s steps(1) infinite; }}
+    @keyframes type {{ from {{ clip-path: inset(0 100% 0 0); }} to {{ clip-path: inset(0 0 0 0); }} }}
+    @keyframes show {{ from {{ opacity: 0; }} to {{ opacity: 1; }} }}
     @keyframes blink {{ 50% {{ fill-opacity: 0; }} }}
+    @media (prefers-reduced-motion: reduce) {{ * {{ animation: none !important; }} }}
   </style>
   <rect x="0.5" y="0.5" width="839" height="{height - 1}" rx="10" fill="#0d1117" stroke="#30363d"/>
   <path d="M0.5 32 V10.5 a10 10 0 0 1 10 -10 H829.5 a10 10 0 0 1 10 10 V32 Z" fill="#161b22"/>
@@ -152,8 +153,8 @@ def city(totals, owner, today):
     m0, m1 = edge(-1, 8.4), edge(weeks + 1, 8.4)
     road = (f'<polygon class="road" points="{pt(*r0)} {pt(*r1)} {pt(*q1)} {pt(*q0)}"/>'
             f'<line class="lane" x1="{m0[0]:.1f}" y1="{m0[1]:.1f}" x2="{m1[0]:.1f}" y2="{m1[1]:.1f}"/>'
-            f'<g><path d="M-6 -2.5 h12 v5 h-12 Z" class="car"/><circle cx="7" cy="-1.5" r="1.3" class="hl"/><circle cx="7" cy="1.5" r="1.3" class="hl"/>'
-            f'<animateMotion dur="16s" repeatCount="indefinite" rotate="auto" path="M{m0[0]:.1f} {m0[1]:.1f} L{m1[0]:.1f} {m1[1]:.1f}"/></g>')
+            f'<g class="drive" style="offset-path:path(\'M{m0[0]:.1f} {m0[1]:.1f} L{m1[0]:.1f} {m1[1]:.1f}\')">'
+            f'<path d="M-6 -2.5 h12 v5 h-12 Z" class="car"/><circle cx="7" cy="-1.5" r="1.3" class="hl"/><circle cx="7" cy="1.5" r="1.3" class="hl"/></g>')
     signs = []
     for name, s, e, _, _ in JOBS:  # street names under each job's stretch of the city
         first, last = max(s, start), min(e or today, today)
@@ -198,6 +199,8 @@ def city(totals, owner, today):
     .beacon {{ fill: #ff4d4d; animation: beacon 1.6s ease-in-out infinite; }}
     .road {{ fill: #10142a; }} .lane {{ stroke: #59627f; stroke-width: 1; stroke-dasharray: 6 6; }}
     .car {{ fill: #e86a5a; }} .hl {{ fill: #fff3b0; }}
+    .drive {{ offset-rotate: auto; animation: drive 16s linear infinite; }}
+    @keyframes drive {{ from {{ offset-distance: 0%; }} to {{ offset-distance: 100%; }} }}
     .s1, .s2, .s3 {{ fill: #ffffff; animation: twinkle 3s ease-in-out infinite; }}
     .s2 {{ animation-duration: 4.5s; }} .s3 {{ animation-duration: 6s; }}
     @keyframes on {{ to {{ opacity: .95; }} }}
