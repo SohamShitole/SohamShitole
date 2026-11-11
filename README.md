@@ -3,13 +3,15 @@
 Software engineer at [Astorie](https://astorie.ai), working on AI agents, creative tooling and the platform behind them.
 
 <!-- STATS:START -->
-<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/terminal.svg?v=76b9e6bb" alt="Terminal: whoami, contributions in the last year, current focus" width="100%">
+<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/terminal.svg?v=4ebc3596" alt="Terminal: whoami, contributions in the last year, current focus" width="100%">
 
-<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/city.svg?v=417b8bad" alt="Contribution city: one building per day over the last 12 months" width="100%">
+<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/highlights.svg?v=2df28bf7" alt="Highlights: 1.6M+ lines of code this year, 100+ features shipped" width="100%">
+
+<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/city.svg?v=d03e5e95" alt="Contribution city: one building per day over the last 12 months" width="100%">
 
 <img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/timeline.svg?v=7988d176" alt="Career timeline: Adsgency AI, then Astorie" width="100%">
 
-<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/stack.svg?v=532191ca" alt="Languages I write and the stack I build with" width="100%">
+<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/stack.svg?v=d85bb0f6" alt="Languages I write and the stack I build with" width="100%">
 
 <details>
 <summary><b>Detailed stats</b></summary>
@@ -19,7 +21,7 @@ Software engineer at [Astorie](https://astorie.ai), working on AI agents, creati
 
 <img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/startup-stats.svg?v=3" alt="Before Astorie at Adsgency AI, Nov 2025 to Jun 2026: 5,043 contributions over 158 active days" width="100%">
 
-At Astorie so far: **4,600+ commits · 927 PRs merged · +1.0M lines of code** (from git history, Nov 2026).
+This year: **1.6M+ lines of code** (1.0M at Astorie, 600K+ at Adsgency AI) · **100+ features shipped** · at Astorie **4,600+ commits** and **927 PRs merged** (Nov 2026).
 
 </details>
 
