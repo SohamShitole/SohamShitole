@@ -5,7 +5,7 @@ Software engineer at [Astorie](https://astorie.ai), working on AI agents, creati
 <!-- STATS:START -->
 <img src="./astorie-stats.svg?v=2026-11-11" alt="Work at Astorie: 7,218 contributions since Jul 2026" width="100%">
 
-**12,263 contributions in the last year** across all my GitHub accounts · _updated Nov 11, 2026_
+**12,267 contributions in the last year** across all my GitHub accounts · _updated Nov 11, 2026_
 <!-- STATS:END -->
 
 At Astorie so far: **4,600+ commits · 927 PRs merged · +1.0M lines of code** (from git history, Nov 2026).
