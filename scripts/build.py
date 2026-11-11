@@ -142,14 +142,21 @@ def main():
         "stack.svg": (scenes.stack(today), "Languages I write and the stack I build with"),
         "astorie-stats.svg": (card(days, today), f"Work at Astorie: {sum(days.values()):,} contributions since {WORK_START:%b %Y}"),
     }
+    # GitHub's raw CDN ignores query strings and caches each path for ~5 minutes, so every version
+    # gets a new file name (name-<content hash>.svg) and the previous versions are removed.
+    cards = os.path.join(ROOT, "cards")
+    os.makedirs(cards, exist_ok=True)
+    for old in os.listdir(cards):
+        os.remove(os.path.join(cards, old))
+    paths = {}
     for name, (svg, _) in images.items():
-        with open(os.path.join(ROOT, name), "w") as f:
+        stem = name.removesuffix(".svg")
+        paths[name] = f"cards/{stem}-{hashlib.sha1(svg.encode()).hexdigest()[:8]}.svg"
+        with open(os.path.join(ROOT, paths[name]), "w") as f:
             f.write(svg)
 
-    # GitHub's image proxy caches by URL, so key each URL on the image's content.
     raw = "https://raw.githubusercontent.com/SohamShitole/SohamShitole/main"
-    img = lambda name: (f'<img src="{raw}/{name}?v={hashlib.sha1(images[name][0].encode()).hexdigest()[:8]}" '
-                        f'alt="{images[name][1]}" width="100%">')
+    img = lambda name: f'<img src="{raw}/{paths[name]}" alt="{images[name][1]}" width="100%">'
     section = "\n\n".join([
         img("terminal.svg"), img("highlights.svg"), img("city.svg"), img("timeline.svg"), img("stack.svg"),
         "<details>\n<summary><b>Detailed stats</b></summary>\n",
