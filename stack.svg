@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="270" viewBox="0 0 840 270" role="img" aria-labelledby="kt kd">
+  <title id="kt">What I write and what I build with</title>
+  <desc id="kd">Lines added at Astorie by language: TypeScript 78%, React (TSX) 13%, SQL 6%, Shell 1%, Other 1%. Stack: TypeScript, React, Next.js, Postgres, Supabase, Drizzle, Zustand, React Flow, Vercel AI SDK, OpenAI, Anthropic, FAL, Stripe, PostHog, Railway, Vercel.</desc>
+  <style>
+    :root { --bg:#ffffff; --border:#d0d7de; --ink:#1f2328; --ink2:#59636e; --muted:#818b98; --grid:#eaeef2; --ts:#2f6fde; --tsx:#1fa3a3; --sql:#d9822b; --sh:#7a5af5; --oth:#8c959f; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#0d1117; --border:#30363d; --ink:#e6edf3; --ink2:#9198a1; --muted:#6e7681; --grid:#21262d; --ts:#4c8df6; --tsx:#22a5a5; --sql:#cf7f33; --sh:#8a6ff0; --oth:#6e7681; }
+    }
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .bg { fill: var(--bg); stroke: var(--border); }
+    .h { fill: var(--ink); font-size: 16px; font-weight: 600; }
+    .num { fill: var(--ink); font-size: 22px; font-weight: 600; }
+    .lbl { fill: var(--ink2); font-size: 12px; }
+    .ax { fill: var(--muted); font-size: 11px; }
+    .v { fill: var(--ink); font-size: 12px; font-weight: 600; }
+    .arc { fill: none; stroke-width: 22; transform: rotate(-90deg); transform-origin: 130px 135px; opacity: 0; animation: in .5s ease-out forwards; }
+    .ts { stroke: var(--ts); } .tsx { stroke: var(--tsx); } .sql { stroke: var(--sql); } .sh { stroke: var(--sh); } .oth { stroke: var(--oth); }
+    .tsf { fill: var(--ts); } .tsxf { fill: var(--tsx); } .sqlf { fill: var(--sql); } .shf { fill: var(--sh); } .othf { fill: var(--oth); }
+    .pill { fill: var(--bg); stroke: var(--border); }
+    .pt { fill: var(--ink2); font-size: 11.5px; }
+    @keyframes in { to { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { .arc { animation: none; opacity: 1; } }
+  </style>
+  <rect class="bg" x="0.5" y="0.5" width="839" height="269" rx="8"/>
+  <text class="h" x="24" y="34">What I write</text>
+  <text class="h" x="520" y="34">What I build with</text>
+  <circle class="arc ts" cx="130" cy="135" r="70" pathLength="439.8" stroke-dasharray="341.9 439.8" stroke-dashoffset="0.0" style="animation-delay:0.20s"/><circle class="arc tsx" cx="130" cy="135" r="70" pathLength="439.8" stroke-dasharray="57.4 439.8" stroke-dashoffset="-343.9" style="animation-delay:0.35s"/><circle class="arc sql" cx="130" cy="135" r="70" pathLength="439.8" stroke-dasharray="24.0 439.8" stroke-dashoffset="-403.2" style="animation-delay:0.50s"/><circle class="arc sh" cx="130" cy="135" r="70" pathLength="439.8" stroke-dasharray="3.6 439.8" stroke-dashoffset="-429.2" style="animation-delay:0.65s"/><circle class="arc oth" cx="130" cy="135" r="70" pathLength="439.8" stroke-dasharray="3.0 439.8" stroke-dashoffset="-434.9" style="animation-delay:0.80s"/>
+  <text class="num" x="130" y="139" text-anchor="middle">1.0M</text>
+  <text class="ax" x="130" y="157" text-anchor="middle">lines of code</text>
+  <rect class="tsf" x="250" y="68" width="12" height="12" rx="3"/><text class="lbl" x="270" y="78">TypeScript</text><text class="v" x="430" y="78" text-anchor="end">78%</text><text class="ax" x="440" y="78">794K lines</text><rect class="tsxf" x="250" y="94" width="12" height="12" rx="3"/><text class="lbl" x="270" y="104">React (TSX)</text><text class="v" x="430" y="104" text-anchor="end">13%</text><text class="ax" x="440" y="104">137K lines</text><rect class="sqlf" x="250" y="120" width="12" height="12" rx="3"/><text class="lbl" x="270" y="130">SQL</text><text class="v" x="430" y="130" text-anchor="end">6%</text><text class="ax" x="440" y="130">60K lines</text><rect class="shf" x="250" y="146" width="12" height="12" rx="3"/><text class="lbl" x="270" y="156">Shell</text><text class="v" x="430" y="156" text-anchor="end">1%</text><text class="ax" x="440" y="156">13K lines</text><rect class="othf" x="250" y="172" width="12" height="12" rx="3"/><text class="lbl" x="270" y="182">Other</text><text class="v" x="430" y="182" text-anchor="end">1%</text><text class="ax" x="440" y="182">11K lines</text>
+  <rect class="pill" x="520" y="57" width="86" height="22" rx="11"/><text class="pt" x="563" y="72" text-anchor="middle">TypeScript</text><rect class="pill" x="614" y="57" width="52" height="22" rx="11"/><text class="pt" x="640" y="72" text-anchor="middle">React</text><rect class="pill" x="674" y="57" width="66" height="22" rx="11"/><text class="pt" x="707" y="72" text-anchor="middle">Next.js</text><rect class="pill" x="520" y="87" width="72" height="22" rx="11"/><text class="pt" x="556" y="102" text-anchor="middle">Postgres</text><rect class="pill" x="600" y="87" width="72" height="22" rx="11"/><text class="pt" x="637" y="102" text-anchor="middle">Supabase</text><rect class="pill" x="681" y="87" width="66" height="22" rx="11"/><text class="pt" x="714" y="102" text-anchor="middle">Drizzle</text><rect class="pill" x="520" y="117" width="66" height="22" rx="11"/><text class="pt" x="553" y="132" text-anchor="middle">Zustand</text><rect class="pill" x="594" y="117" width="86" height="22" rx="11"/><text class="pt" x="637" y="132" text-anchor="middle">React Flow</text><rect class="pill" x="688" y="117" width="106" height="22" rx="11"/><text class="pt" x="741" y="132" text-anchor="middle">Vercel AI SDK</text><rect class="pill" x="520" y="147" width="59" height="22" rx="11"/><text class="pt" x="549" y="162" text-anchor="middle">OpenAI</text><rect class="pill" x="587" y="147" width="79" height="22" rx="11"/><text class="pt" x="626" y="162" text-anchor="middle">Anthropic</text><rect class="pill" x="674" y="147" width="38" height="22" rx="11"/><text class="pt" x="693" y="162" text-anchor="middle">FAL</text><rect class="pill" x="720" y="147" width="59" height="22" rx="11"/><text class="pt" x="750" y="162" text-anchor="middle">Stripe</text><rect class="pill" x="520" y="177" width="66" height="22" rx="11"/><text class="pt" x="553" y="192" text-anchor="middle">PostHog</text><rect class="pill" x="594" y="177" width="66" height="22" rx="11"/><text class="pt" x="626" y="192" text-anchor="middle">Railway</text><rect class="pill" x="667" y="177" width="59" height="22" rx="11"/><text class="pt" x="697" y="192" text-anchor="middle">Vercel</text>
+  <text class="ax" x="24" y="252">Lines added in my Astorie commits, from git (Nov 2026)</text>
+</svg>
