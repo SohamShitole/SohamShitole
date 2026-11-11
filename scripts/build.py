@@ -129,7 +129,7 @@ def main():
     year_ago = today - dt.timedelta(days=364)
     last_year = sum(c for d, c in days.items() if d >= year_ago)
     last_year += sum(sum(calendar(login, year_ago, today).values()) for login in OTHER_LOGINS)
-    section = (f'<img src="./astorie-stats.svg?v={version}" alt="Work at Astorie: '
+    section = (f'<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/astorie-stats.svg?v={version}" alt="Work at Astorie: '
                f'{sum(days.values()):,} contributions since {WORK_START:%b %Y}" width="100%">\n\n'
                f'**{last_year:,} contributions in the last year** across all my GitHub accounts · '
                f'_updated {today:%b} {today.day}, {today.year}_')
