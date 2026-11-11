@@ -67,7 +67,8 @@ def terminal(totals, accounts, today):
         if cmd:
             dur = 0.04 * len(text) + 0.2
             out.append(f'<text class="p" x="24" y="{y}">$</text><text class="c" x="40" y="{y}" '
-                       f'style="animation-delay:{t:.2f}s;animation-duration:{dur:.2f}s;animation-timing-function:steps({len(text)})">{text}</text>')
+                       f'style="animation-delay:{t:.2f}s;animation-duration:{dur:.2f}s;animation-timing-function:steps({len(text) + 1},jump-none)">{text}</text>')
+            # jump-none reaches the full line on the last step, so a browser that stops one step short still shows it all.
             t += dur + 0.25
         else:
             out.append(f'<text class="o" x="40" y="{y}" style="animation-delay:{t:.2f}s;white-space:pre">{esc(text)}</text>')
