@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="300" viewBox="0 0 840 300" role="img" aria-labelledby="t d">
+  <title id="t">Work at Astorie: Jul to Nov 2026</title>
+  <desc id="d">4,614 commits, 927 merged pull requests, 1.0 million lines of code added and 124 thousand removed, 94 active days. Monthly commits: Jul 383, Aug 410, Sep 783, Oct 2,522, Nov to date 516.</desc>
+  <style>
+    :root { --bg:#ffffff; --border:#d0d7de; --ink:#1f2328; --ink2:#59636e; --muted:#818b98; --grid:#eaeef2; --bar:#2f6fde; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#0d1117; --border:#30363d; --ink:#e6edf3; --ink2:#9198a1; --muted:#6e7681; --grid:#21262d; --bar:#4c8df6; }
+    }
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .bg { fill: var(--bg); stroke: var(--border); }
+    .h { fill: var(--ink); font-size: 16px; font-weight: 600; }
+    .sub { fill: var(--ink2); font-size: 12px; }
+    .num { fill: var(--ink); font-size: 26px; font-weight: 600; }
+    .lbl { fill: var(--ink2); font-size: 12px; }
+    .ax { fill: var(--muted); font-size: 11px; }
+    .val { fill: var(--ink2); font-size: 11px; }
+    .grid { stroke: var(--grid); stroke-width: 1; }
+    .bar { fill: var(--bar); }
+  </style>
+  <rect class="bg" x="0.5" y="0.5" width="839" height="299" rx="8"/>
+
+  <text class="h" x="24" y="36">Work at Astorie</text>
+  <text class="sub" x="24" y="55">Jul – Nov 2026 · private repos, from git history</text>
+
+  <!-- stat tiles -->
+  <g transform="translate(24,92)">
+    <text class="num" x="0" y="0">4,614</text><text class="lbl" x="0" y="20">commits</text>
+    <text class="num" x="0" y="66">927</text><text class="lbl" x="0" y="86">PRs merged</text>
+    <text class="num" x="150" y="0">+1.0M</text><text class="lbl" x="150" y="20">lines of code added</text>
+    <text class="num" x="150" y="66">94</text><text class="lbl" x="150" y="86">active days</text>
+    <text class="sub" x="0" y="140">−124K lines removed · 428K of the added lines are tests</text>
+  </g>
+
+  <!-- monthly commits: baseline y=250, 0.065 px per commit (2,522 → 164px) -->
+  <text class="lbl" x="440" y="36">Commits per month</text>
+  <line class="grid" x1="440" y1="250" x2="816" y2="250"/>
+  <line class="grid" x1="440" y1="185" x2="816" y2="185"/>
+  <line class="grid" x1="440" y1="120" x2="816" y2="120"/>
+  <text class="ax" x="816" y="181" text-anchor="end">1,000</text>
+  <text class="ax" x="816" y="116" text-anchor="end">2,000</text>
+  <g>
+    <path class="bar" d="M452 250 V229.1 a4 4 0 0 1 4 -4 h40 a4 4 0 0 1 4 4 V250 Z"/>
+    <path class="bar" d="M524 250 V227.4 a4 4 0 0 1 4 -4 h40 a4 4 0 0 1 4 4 V250 Z"/>
+    <path class="bar" d="M596 250 V203.1 a4 4 0 0 1 4 -4 h40 a4 4 0 0 1 4 4 V250 Z"/>
+    <path class="bar" d="M668 250 V90.1 a4 4 0 0 1 4 -4 h40 a4 4 0 0 1 4 4 V250 Z"/>
+    <path class="bar" d="M740 250 V220.5 a4 4 0 0 1 4 -4 h40 a4 4 0 0 1 4 4 V250 Z"/>
+  </g>
+  <g text-anchor="middle">
+    <text class="val" x="476" y="219">383</text>
+    <text class="val" x="548" y="217">410</text>
+    <text class="val" x="620" y="193">783</text>
+    <text class="val" x="692" y="80">2,522</text>
+    <text class="val" x="764" y="210">516</text>
+    <text class="ax" x="476" y="268">Jul</text>
+    <text class="ax" x="548" y="268">Aug</text>
+    <text class="ax" x="620" y="268">Sep</text>
+    <text class="ax" x="692" y="268">Oct</text>
+    <text class="ax" x="764" y="268">Nov*</text>
+  </g>
+  <text class="ax" x="816" y="288" text-anchor="end">*Nov to date (Nov 10)</text>
+</svg>
