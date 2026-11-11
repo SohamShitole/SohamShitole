@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="840" height="300" viewBox="0 0 840 300" role="img" aria-labelledby="t d">
-  <title id="t">Previous startup: Nov 2025 to Jun 2026</title>
+  <title id="t">Adsgency AI: Nov 2025 to Jun 2026</title>
   <desc id="d">5,043 GitHub contributions over 158 active days. Monthly contributions: Nov 217, Dec 427, Jan 347, Feb 751, Mar 461, Apr 2,354, May 485.</desc>
   <style>
     :root { --bg:#ffffff; --border:#d0d7de; --ink:#1f2328; --ink2:#59636e; --muted:#818b98; --grid:#eaeef2; --bar:#2f6fde; }
@@ -19,7 +19,7 @@
   </style>
   
   <rect class="bg" x="0.5" y="0.5" width="839" height="299" rx="8"/>
-  <text class="h" x="24" y="36">Before Astorie: ML startup</text>
+  <text class="h" x="24" y="36">Before Astorie: Adsgency AI</text>
   <text class="sub" x="24" y="55">Nov 2025 – Jun 2026 · private repos, as @sohamshitole-mldev</text>
   <g transform="translate(24,92)"><text class="num" x="0" y="0">5,043</text><text class="lbl" x="0" y="20">contributions</text><text class="num" x="150" y="0">158</text><text class="lbl" x="150" y="20">active days</text><text class="num" x="0" y="66">2,354</text><text class="lbl" x="0" y="86">in the peak month (Apr)</text><text class="num" x="150" y="66">~32</text><text class="lbl" x="150" y="86">per active day</text><text class="sub" x="0" y="140">Contributions = commits, PRs, reviews and issues</text></g>
   <text class="lbl" x="440" y="36">Contributions per month</text>
