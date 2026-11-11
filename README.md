@@ -3,9 +3,9 @@
 Software engineer at [Astorie](https://astorie.ai), working on AI agents, creative tooling and the platform behind them.
 
 <!-- STATS:START -->
-<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/terminal.svg?v=550540f5" alt="Terminal: whoami, contributions in the last year, current focus" width="100%">
+<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/terminal.svg?v=76b9e6bb" alt="Terminal: whoami, contributions in the last year, current focus" width="100%">
 
-<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/city.svg?v=a821de3a" alt="Contribution city: one building per day over the last 12 months" width="100%">
+<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/city.svg?v=417b8bad" alt="Contribution city: one building per day over the last 12 months" width="100%">
 
 <img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/timeline.svg?v=7988d176" alt="Career timeline: Adsgency AI, then Astorie" width="100%">
 
