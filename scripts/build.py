@@ -3,6 +3,7 @@
 Runs daily in .github/workflows/update.yml. Needs GITHUB_TOKEN (any token can read public calendars).
 """
 import datetime as dt
+import hashlib
 import json
 import os
 import re
@@ -119,13 +120,16 @@ def card(days, today):
 def main():
     today = dt.datetime.now(dt.timezone.utc).date()
     days = work_days(today)
+    svg = card(days, today)
     with open(os.path.join(ROOT, "astorie-stats.svg"), "w") as f:
-        f.write(card(days, today))
+        f.write(svg)
+    # GitHub's image proxy caches by URL, so key the URL on the card's content.
+    version = hashlib.sha1(svg.encode()).hexdigest()[:8]
 
     year_ago = today - dt.timedelta(days=364)
     last_year = sum(c for d, c in days.items() if d >= year_ago)
     last_year += sum(sum(calendar(login, year_ago, today).values()) for login in OTHER_LOGINS)
-    section = (f'<img src="./astorie-stats.svg?v={today}" alt="Work at Astorie: '
+    section = (f'<img src="./astorie-stats.svg?v={version}" alt="Work at Astorie: '
                f'{sum(days.values()):,} contributions since {WORK_START:%b %Y}" width="100%">\n\n'
                f'**{last_year:,} contributions in the last year** across all my GitHub accounts · '
                f'_updated {today:%b} {today.day}, {today.year}_')
