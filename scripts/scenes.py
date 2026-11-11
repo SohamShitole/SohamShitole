@@ -13,6 +13,10 @@ LANGUAGES = [("TypeScript", 794_408, "ts"), ("React (TSX)", 137_115, "tsx"), ("S
              ("Python (Adsgency AI)", 600_000, "py"), ("Shell", 13_041, "sh"), ("Other", 11_461, "oth")]
 FEATURES = "100+"
 PRS_MERGED = 927  # Astorie, GitHub search, Nov 10 2026
+# Product scale (Nov 2026). Astorie: app DB auth.users (211K) + PostHog generation:started since Jun 9 2026.
+# AdsGency AI: the company's own homepage claims (adsgency.ai).
+IMPACT = [("200K+", "users on the platform", "Astorie"), ("1.8M+", "AI generations run", "Astorie"),
+          ("150+", "businesses on the platform", "AdsGency AI"), ("$50M+", "ad spend managed", "AdsGency AI")]
 STACK = ["TypeScript", "Python", "SQL", "React", "Next.js", "Node.js", "LangGraph", "LangChain", "OpenAI",
          "Anthropic", "Vercel AI SDK", "FAL", "MCP", "Postgres", "Supabase", "Drizzle", "Zustand", "React Flow",
          "Stripe", "PostHog", "Railway", "Vercel"]
@@ -365,21 +369,29 @@ def stack(today):
 
 def highlights(year_total, today):
     lines = sum(n for _, n, _ in LANGUAGES)
-    tiles = [(f"{lines / 1e6:.1f}M+", "lines of code this year"), (FEATURES, "features shipped"),
-             (f"{year_total / 1000:.1f}K", "contributions in 12 months"), (f"{PRS_MERGED:,}", "PRs merged at Astorie")]
+    output = [(f"{lines / 1e6:.1f}M+", "lines of code this year", "Astorie + AdsGency AI"),
+              (FEATURES, "features shipped", "Astorie + AdsGency AI"),
+              (f"{year_total / 1000:.1f}K", "contributions in 12 months", "all GitHub accounts"),
+              (f"{PRS_MERGED:,}", "PRs merged", "Astorie")]
+    rows = [("Scale of what I build on", IMPACT), ("What I ship", output)]
+    tiles = [t for _, row in rows for t in row]
     body = []
-    for i, (big, small) in enumerate(tiles):
-        x = 24 + i * 204
-        body.append(f'<g class="tile" style="animation-delay:{0.15 + i * 0.15:.2f}s">'
-                    f'<rect class="card" x="{x}" y="20" width="188" height="104" rx="10"/>'
-                    f'<rect class="bar k{i}" x="{x}" y="20" width="4" height="104" rx="2"/>'
-                    f'<text class="big" x="{x + 20}" y="74">{big}</text>'
-                    f'<text class="lbl" x="{x + 20}" y="100">{small}</text></g>')
+    for r, (title, row) in enumerate(rows):
+        y = 34 + r * 158
+        body.append(f'<text class="h" x="24" y="{y}">{title}</text>')
+        for i, (big, small, src) in enumerate(row):
+            x, n = 24 + i * 204, r * 4 + i
+            body.append(f'<g class="tile" style="animation-delay:{0.1 + n * 0.1:.2f}s">'
+                        f'<rect class="card" x="{x}" y="{y + 14}" width="188" height="118" rx="10"/>'
+                        f'<rect class="k{i}" x="{x}" y="{y + 14}" width="4" height="118" rx="2"/>'
+                        f'<text class="big" x="{x + 20}" y="{y + 64}">{esc(big)}</text>'
+                        f'<text class="lbl" x="{x + 20}" y="{y + 90}">{small}</text>'
+                        f'<text class="ax" x="{x + 20}" y="{y + 112}">{src}</text></g>')
     light = "--k0:#2f6fde; --k1:#c2477f; --k2:#1fa3a3; --k3:#7a5af5; --card:#f6f8fa;"
     dark = "--k0:#4c8df6; --k1:#d0578f; --k2:#22a5a5; --k3:#8a6ff0; --card:#161b22;"
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="840" height="144" viewBox="0 0 840 144" role="img" aria-labelledby="ht hd">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="840" height="340" viewBox="0 0 840 340" role="img" aria-labelledby="ht hd">
   <title id="ht">Highlights</title>
-  <desc id="hd">{"; ".join(f"{b} {s}" for b, s in tiles)}.</desc>
+  <desc id="hd">{"; ".join(f"{esc(b)} {s} ({src})" for b, s, src in tiles)}.</desc>
   <style>{THEMED.format(light=light, dark=dark)}
     .card {{ fill: var(--card); stroke: var(--border); }}
     .big {{ fill: var(--ink); font-size: 30px; font-weight: 700; }}
