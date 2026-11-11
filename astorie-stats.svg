@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="840" height="300" viewBox="0 0 840 300" role="img" aria-labelledby="t d">
-  <title id="t">Work at Astorie: Jul to Nov 2026</title>
-  <desc id="d">4,614 commits, 927 merged pull requests, 1.0 million lines of code added and 124 thousand removed, 94 active days. Monthly commits: Jul 383, Aug 410, Sep 783, Oct 2,522, Nov to date 516.</desc>
+  <title id="t">Work at Astorie: Jul 2026 – Nov 2026</title>
+  <desc id="d">7,218 contributions over 104 active days. Current streak 17 days, longest 17 days.</desc>
   <style>
     :root { --bg:#ffffff; --border:#d0d7de; --ink:#1f2328; --ink2:#59636e; --muted:#818b98; --grid:#eaeef2; --bar:#2f6fde; }
     @media (prefers-color-scheme: dark) {
@@ -12,50 +12,25 @@
     .sub { fill: var(--ink2); font-size: 12px; }
     .num { fill: var(--ink); font-size: 26px; font-weight: 600; }
     .lbl { fill: var(--ink2); font-size: 12px; }
-    .ax { fill: var(--muted); font-size: 11px; }
-    .val { fill: var(--ink2); font-size: 11px; }
+    .ax { fill: var(--muted); font-size: 11px; text-anchor: middle; }
+    .val { fill: var(--ink2); font-size: 11px; text-anchor: middle; }
     .grid { stroke: var(--grid); stroke-width: 1; }
     .bar { fill: var(--bar); }
   </style>
   <rect class="bg" x="0.5" y="0.5" width="839" height="299" rx="8"/>
-
   <text class="h" x="24" y="36">Work at Astorie</text>
-  <text class="sub" x="24" y="55">Jul – Nov 2026 · private repos, from git history</text>
-
-  <!-- stat tiles -->
+  <text class="sub" x="24" y="55">Jul 2026 – Nov 2026 · private repos, as @soham406 · updated daily</text>
   <g transform="translate(24,92)">
-    <text class="num" x="0" y="0">4,614</text><text class="lbl" x="0" y="20">commits</text>
-    <text class="num" x="0" y="66">927</text><text class="lbl" x="0" y="86">PRs merged</text>
-    <text class="num" x="150" y="0">+1.0M</text><text class="lbl" x="150" y="20">lines of code added</text>
-    <text class="num" x="150" y="66">94</text><text class="lbl" x="150" y="86">active days</text>
-    <text class="sub" x="0" y="140">−124K lines removed · 428K of the added lines are tests</text>
+    <text class="num" x="0" y="0">7,218</text><text class="lbl" x="0" y="20">contributions</text>
+    <text class="num" x="150" y="0">104</text><text class="lbl" x="150" y="20">active days</text>
+    <text class="num" x="0" y="66">17</text><text class="lbl" x="0" y="86">day current streak</text>
+    <text class="num" x="150" y="66">17</text><text class="lbl" x="150" y="86">day longest streak</text>
+    <text class="sub" x="0" y="140">Contributions = commits, PRs, reviews and issues</text>
   </g>
-
-  <!-- monthly commits: baseline y=250, 0.065 px per commit (2,522 → 164px) -->
-  <text class="lbl" x="440" y="36">Commits per month</text>
+  <text class="lbl" x="440" y="36">Contributions per month</text>
   <line class="grid" x1="440" y1="250" x2="816" y2="250"/>
-  <line class="grid" x1="440" y1="185" x2="816" y2="185"/>
-  <line class="grid" x1="440" y1="120" x2="816" y2="120"/>
-  <text class="ax" x="816" y="181" text-anchor="end">1,000</text>
-  <text class="ax" x="816" y="116" text-anchor="end">2,000</text>
-  <g>
-    <path class="bar" d="M452 250 V229.1 a4 4 0 0 1 4 -4 h40 a4 4 0 0 1 4 4 V250 Z"/>
-    <path class="bar" d="M524 250 V227.4 a4 4 0 0 1 4 -4 h40 a4 4 0 0 1 4 4 V250 Z"/>
-    <path class="bar" d="M596 250 V203.1 a4 4 0 0 1 4 -4 h40 a4 4 0 0 1 4 4 V250 Z"/>
-    <path class="bar" d="M668 250 V90.1 a4 4 0 0 1 4 -4 h40 a4 4 0 0 1 4 4 V250 Z"/>
-    <path class="bar" d="M740 250 V220.5 a4 4 0 0 1 4 -4 h40 a4 4 0 0 1 4 4 V250 Z"/>
-  </g>
-  <g text-anchor="middle">
-    <text class="val" x="476" y="219">383</text>
-    <text class="val" x="548" y="217">410</text>
-    <text class="val" x="620" y="193">783</text>
-    <text class="val" x="692" y="80">2,522</text>
-    <text class="val" x="764" y="210">516</text>
-    <text class="ax" x="476" y="268">Jul</text>
-    <text class="ax" x="548" y="268">Aug</text>
-    <text class="ax" x="620" y="268">Sep</text>
-    <text class="ax" x="692" y="268">Oct</text>
-    <text class="ax" x="764" y="268">Nov*</text>
-  </g>
-  <text class="ax" x="816" y="288" text-anchor="end">*Nov to date (Nov 10)</text>
+  <line class="grid" x1="440" y1="209.5" x2="816" y2="209.5"/><text class="ax" x="816" y="205.5" style="text-anchor:end">1,000</text><line class="grid" x1="440" y1="168.9" x2="816" y2="168.9"/><text class="ax" x="816" y="164.9" style="text-anchor:end">2,000</text><line class="grid" x1="440" y1="128.4" x2="816" y2="128.4"/><text class="ax" x="816" y="124.4" style="text-anchor:end">3,000</text>
+  <path class="bar" d="M452 250 V242.6 a4 4 0 0 1 4 -4 h32 a4 4 0 0 1 4 4 V250 Z"/><path class="bar" d="M512 250 V227.0 a4 4 0 0 1 4 -4 h32 a4 4 0 0 1 4 4 V250 Z"/><path class="bar" d="M572 250 V195.9 a4 4 0 0 1 4 -4 h32 a4 4 0 0 1 4 4 V250 Z"/><path class="bar" d="M632 250 V94.0 a4 4 0 0 1 4 -4 h32 a4 4 0 0 1 4 4 V250 Z"/><path class="bar" d="M692 250 V217.8 a4 4 0 0 1 4 -4 h32 a4 4 0 0 1 4 4 V250 Z"/>
+  <text class="val" x="472.0" y="232.6">282</text><text class="ax" x="472.0" y="268">Jul</text><text class="val" x="532.0" y="217.0">665</text><text class="ax" x="532.0" y="268">Aug</text><text class="val" x="592.0" y="185.9">1,433</text><text class="ax" x="592.0" y="268">Sep</text><text class="val" x="652.0" y="84.0">3,946</text><text class="ax" x="652.0" y="268">Oct</text><text class="val" x="712.0" y="207.8">892</text><text class="ax" x="712.0" y="268">Nov*</text>
+  <text class="ax" x="816" y="288" style="text-anchor:end">*Nov to date (Nov 11)</text>
 </svg>
