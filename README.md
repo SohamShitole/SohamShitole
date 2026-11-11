@@ -3,21 +3,21 @@
 Software engineer at [Astorie](https://astorie.ai), working on AI agents, creative tooling and the platform behind them.
 
 <!-- STATS:START -->
-<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/terminal.svg?v=72d5fdac" alt="Terminal: whoami, contributions in the last year, current focus" width="100%">
+<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/cards/terminal-c2300e83.svg" alt="Terminal: whoami, contributions in the last year, current focus" width="100%">
 
-<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/highlights.svg?v=2df28bf7" alt="Highlights: 1.6M+ lines of code this year, 100+ features shipped" width="100%">
+<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/cards/highlights-2df28bf7.svg" alt="Highlights: 1.6M+ lines of code this year, 100+ features shipped" width="100%">
 
-<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/city.svg?v=ca23cacd" alt="Contribution city: one building per day over the last 12 months" width="100%">
+<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/cards/city-91f06991.svg" alt="Contribution city: one building per day over the last 12 months" width="100%">
 
-<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/timeline.svg?v=7988d176" alt="Career timeline: Adsgency AI, then Astorie" width="100%">
+<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/cards/timeline-7988d176.svg" alt="Career timeline: Adsgency AI, then Astorie" width="100%">
 
-<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/stack.svg?v=d85bb0f6" alt="Languages I write and the stack I build with" width="100%">
+<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/cards/stack-d85bb0f6.svg" alt="Languages I write and the stack I build with" width="100%">
 
 <details>
 <summary><b>Detailed stats</b></summary>
 
 
-<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/astorie-stats.svg?v=44bcf57b" alt="Work at Astorie: 7,222 contributions since Jul 2026" width="100%">
+<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/cards/astorie-stats-44bcf57b.svg" alt="Work at Astorie: 7,222 contributions since Jul 2026" width="100%">
 
 <img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/startup-stats.svg?v=3" alt="Before Astorie at Adsgency AI, Nov 2025 to Jun 2026: 5,043 contributions over 158 active days" width="100%">
 

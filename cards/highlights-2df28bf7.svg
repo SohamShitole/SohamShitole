@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="144" viewBox="0 0 840 144" role="img" aria-labelledby="ht hd">
+  <title id="ht">Highlights</title>
+  <desc id="hd">1.6M+ lines of code this year; 100+ features shipped; 12.3K contributions in 12 months; 927 PRs merged at Astorie.</desc>
+  <style>
+    :root { --bg:#ffffff; --border:#d0d7de; --ink:#1f2328; --ink2:#59636e; --muted:#818b98; --grid:#eaeef2; --k0:#2f6fde; --k1:#c2477f; --k2:#1fa3a3; --k3:#7a5af5; --card:#f6f8fa; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#0d1117; --border:#30363d; --ink:#e6edf3; --ink2:#9198a1; --muted:#6e7681; --grid:#21262d; --k0:#4c8df6; --k1:#d0578f; --k2:#22a5a5; --k3:#8a6ff0; --card:#161b22; }
+    }
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .bg { fill: var(--bg); stroke: var(--border); }
+    .h { fill: var(--ink); font-size: 16px; font-weight: 600; }
+    .num { fill: var(--ink); font-size: 22px; font-weight: 600; }
+    .lbl { fill: var(--ink2); font-size: 12px; }
+    .ax { fill: var(--muted); font-size: 11px; }
+    .card { fill: var(--card); stroke: var(--border); }
+    .big { fill: var(--ink); font-size: 30px; font-weight: 700; }
+    .k0 { fill: var(--k0); } .k1 { fill: var(--k1); } .k2 { fill: var(--k2); } .k3 { fill: var(--k3); }
+    .tile { animation: up .6s cubic-bezier(.2,.8,.3,1) both; }
+    @keyframes up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .tile { animation: none; } }
+  </style>
+  <g class="tile" style="animation-delay:0.15s"><rect class="card" x="24" y="20" width="188" height="104" rx="10"/><rect class="bar k0" x="24" y="20" width="4" height="104" rx="2"/><text class="big" x="44" y="74">1.6M+</text><text class="lbl" x="44" y="100">lines of code this year</text></g><g class="tile" style="animation-delay:0.30s"><rect class="card" x="228" y="20" width="188" height="104" rx="10"/><rect class="bar k1" x="228" y="20" width="4" height="104" rx="2"/><text class="big" x="248" y="74">100+</text><text class="lbl" x="248" y="100">features shipped</text></g><g class="tile" style="animation-delay:0.45s"><rect class="card" x="432" y="20" width="188" height="104" rx="10"/><rect class="bar k2" x="432" y="20" width="4" height="104" rx="2"/><text class="big" x="452" y="74">12.3K</text><text class="lbl" x="452" y="100">contributions in 12 months</text></g><g class="tile" style="animation-delay:0.60s"><rect class="card" x="636" y="20" width="188" height="104" rx="10"/><rect class="bar k3" x="636" y="20" width="4" height="104" rx="2"/><text class="big" x="656" y="74">927</text><text class="lbl" x="656" y="100">PRs merged at Astorie</text></g>
+</svg>
