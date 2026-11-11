@@ -136,6 +136,7 @@ def main():
 
     images = {  # file name -> (svg, alt text), in README order
         "terminal.svg": (scenes.terminal(year, 3, today), "Terminal: whoami, contributions in the last year, current focus"),
+        "highlights.svg": (scenes.highlights(sum(year.values()), today), "Highlights: 1.6M+ lines of code this year, 100+ features shipped"),
         "city.svg": (scenes.city(totals, owner, today), "Contribution city: one building per day over the last 12 months"),
         "timeline.svg": (scenes.timeline({"g": adsgency, "a": days}, today), "Career timeline: Adsgency AI, then Astorie"),
         "stack.svg": (scenes.stack(today), "Languages I write and the stack I build with"),
@@ -150,12 +151,12 @@ def main():
     img = lambda name: (f'<img src="{raw}/{name}?v={hashlib.sha1(images[name][0].encode()).hexdigest()[:8]}" '
                         f'alt="{images[name][1]}" width="100%">')
     section = "\n\n".join([
-        img("terminal.svg"), img("city.svg"), img("timeline.svg"), img("stack.svg"),
+        img("terminal.svg"), img("highlights.svg"), img("city.svg"), img("timeline.svg"), img("stack.svg"),
         "<details>\n<summary><b>Detailed stats</b></summary>\n",
         img("astorie-stats.svg"),
         f'<img src="{raw}/startup-stats.svg?v=3" alt="Before Astorie at Adsgency AI, Nov 2025 to Jun 2026: '
         f'5,043 contributions over 158 active days" width="100%">',
-        "At Astorie so far: **4,600+ commits · 927 PRs merged · +1.0M lines of code** (from git history, Nov 2026).",
+        "This year: **1.6M+ lines of code** (1.0M at Astorie, 600K+ at Adsgency AI) · **100+ features shipped** · at Astorie **4,600+ commits** and **927 PRs merged** (Nov 2026).",
         "</details>",
         f"_Updated daily · last run {today:%b} {today.day}, {today.year}_",
     ])
