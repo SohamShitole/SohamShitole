@@ -6,11 +6,16 @@ import random
 FONT = '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif'
 MONO = 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace'
 
-# Lines added in my Astorie commits, by language (git numstat, Nov 10 2026; build output and data files excluded).
+# Lines of code added this year. Astorie: git numstat of my commits (Nov 10 2026; build output and data
+# files excluded). Adsgency AI: 600K+ lines, mostly Python (self-reported; no repo access).
+# Order keeps neighbouring donut colours distinguishable (checked with the dataviz palette validator).
 LANGUAGES = [("TypeScript", 794_408, "ts"), ("React (TSX)", 137_115, "tsx"), ("SQL", 60_051, "sql"),
-             ("Shell", 13_041, "sh"), ("Other", 11_461, "oth")]
-STACK = ["TypeScript", "React", "Next.js", "Postgres", "Supabase", "Drizzle", "Zustand", "React Flow",
-         "Vercel AI SDK", "OpenAI", "Anthropic", "FAL", "Stripe", "PostHog", "Railway", "Vercel"]
+             ("Python (Adsgency AI)", 600_000, "py"), ("Shell", 13_041, "sh"), ("Other", 11_461, "oth")]
+FEATURES = "100+"
+PRS_MERGED = 927  # Astorie, GitHub search, Nov 10 2026
+STACK = ["TypeScript", "Python", "SQL", "React", "Next.js", "Node.js", "LangGraph", "LangChain", "OpenAI",
+         "Anthropic", "Vercel AI SDK", "FAL", "MCP", "Postgres", "Supabase", "Drizzle", "Zustand", "React Flow",
+         "Stripe", "PostHog", "Railway", "Vercel"]
 JOBS = [  # (name, start, end or None for current, css key, one-liner)
     ("Adsgency AI", dt.date(2025, 11, 1), dt.date(2026, 6, 30), "g", "ML engineering at an AI ads startup"),
     ("Astorie", dt.date(2026, 7, 1), None, "a", "AI agents, creative canvas & video tools, public API"),
@@ -51,21 +56,26 @@ def terminal(totals, accounts, today):
         (True, "cat now.txt"),
         (False, "Building AI agents that drive a visual canvas for images, video and audio"),
         (True, "cat stack.txt"),
-        (False, "TypeScript · React · Next.js · Postgres · LLM APIs"),
+        (False, "languages  TypeScript · Python · SQL"),
+        (False, "ai         LangGraph · LangChain · OpenAI · Anthropic · Vercel AI SDK · MCP"),
+        (False, "web        React · Next.js · Node.js"),
+        (False, "data/infra Postgres · Supabase · Drizzle · Railway · Vercel"),
     ]
     # CSS only: SMIL (<animate>/<set>) doesn't run in every browser when the SVG is shown as an <img>.
     out, t, y = [], 0.4, 76
-    for cmd, text in lines:
+    for i, (cmd, text) in enumerate(lines):
         if cmd:
             dur = 0.04 * len(text) + 0.2
             out.append(f'<text class="p" x="24" y="{y}">$</text><text class="c" x="40" y="{y}" '
                        f'style="animation-delay:{t:.2f}s;animation-duration:{dur:.2f}s;animation-timing-function:steps({len(text)})">{text}</text>')
             t += dur + 0.25
         else:
-            out.append(f'<text class="o" x="40" y="{y}" style="animation-delay:{t:.2f}s">{esc(text)}</text>')
-            t += 0.35
-            y += 8
-        y += 24
+            out.append(f'<text class="o" x="40" y="{y}" style="animation-delay:{t:.2f}s;white-space:pre">{esc(text)}</text>')
+            t += 0.2
+            if i + 1 == len(lines) or lines[i + 1][0]:  # gap before the next command
+                t += 0.15
+                y += 8
+        y += 24 if cmd or i + 1 == len(lines) or lines[i + 1][0] else 20
     out.append(f'<text class="p o" x="24" y="{y}" style="animation-delay:{t:.2f}s">$</text>'
                f'<rect class="cur" x="40" y="{y - 13}" width="9" height="17" style="animation-delay:{t:.2f}s,{t:.2f}s"/>')
     height = y + 30
@@ -309,7 +319,7 @@ def stack(today):
                     f'stroke-dasharray="{max(frac * circ - gap, 0.5):.1f} {circ:.1f}" stroke-dashoffset="{-acc * circ:.1f}" '
                     f'style="animation-delay:{0.2 + i * 0.15:.2f}s"/>')
         acc += frac
-        y = 78 + i * 26
+        y = 70 + i * 26
         legend.append(f'<rect class="{k}f" x="250" y="{y - 10}" width="12" height="12" rx="3"/>'
                       f'<text class="lbl" x="270" y="{y}">{name}</text>'
                       f'<text class="v" x="430" y="{y}" text-anchor="end">{frac:.0%}</text>'
@@ -322,16 +332,16 @@ def stack(today):
         pills.append(f'<rect class="pill" x="{px:.0f}" y="{py - 15}" width="{w:.0f}" height="22" rx="11"/>'
                      f'<text class="pt" x="{px + w / 2:.0f}" y="{py}" text-anchor="middle">{name}</text>')
         px += w + 8
-    light = "--ts:#2f6fde; --tsx:#1fa3a3; --sql:#d9822b; --sh:#7a5af5; --oth:#8c959f;"
-    dark = "--ts:#4c8df6; --tsx:#22a5a5; --sql:#cf7f33; --sh:#8a6ff0; --oth:#6e7681;"
+    light = "--ts:#2f6fde; --tsx:#1fa3a3; --sql:#d9822b; --py:#c2477f; --sh:#7a5af5; --oth:#8c959f;"
+    dark = "--ts:#4c8df6; --tsx:#22a5a5; --sql:#cf7f33; --py:#d0578f; --sh:#8a6ff0; --oth:#6e7681;"
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="840" height="270" viewBox="0 0 840 270" role="img" aria-labelledby="kt kd">
   <title id="kt">What I write and what I build with</title>
-  <desc id="kd">Lines added at Astorie by language: {", ".join(f"{n} {c / total:.0%}" for n, c, _ in LANGUAGES)}. Stack: {", ".join(STACK)}.</desc>
+  <desc id="kd">Lines of code added this year by language: {", ".join(f"{n} {c / total:.0%}" for n, c, _ in LANGUAGES)}. Stack: {", ".join(STACK)}.</desc>
   <style>{THEMED.format(light=light, dark=dark)}
     .v {{ fill: var(--ink); font-size: 12px; font-weight: 600; }}
     .arc {{ fill: none; stroke-width: 22; transform: rotate(-90deg); transform-origin: {cx}px {cy}px; opacity: 0; animation: in .5s ease-out forwards; }}
-    .ts {{ stroke: var(--ts); }} .tsx {{ stroke: var(--tsx); }} .sql {{ stroke: var(--sql); }} .sh {{ stroke: var(--sh); }} .oth {{ stroke: var(--oth); }}
-    .tsf {{ fill: var(--ts); }} .tsxf {{ fill: var(--tsx); }} .sqlf {{ fill: var(--sql); }} .shf {{ fill: var(--sh); }} .othf {{ fill: var(--oth); }}
+    .ts {{ stroke: var(--ts); }} .tsx {{ stroke: var(--tsx); }} .sql {{ stroke: var(--sql); }} .py {{ stroke: var(--py); }} .sh {{ stroke: var(--sh); }} .oth {{ stroke: var(--oth); }}
+    .tsf {{ fill: var(--ts); }} .tsxf {{ fill: var(--tsx); }} .sqlf {{ fill: var(--sql); }} .pyf {{ fill: var(--py); }} .shf {{ fill: var(--sh); }} .othf {{ fill: var(--oth); }}
     .pill {{ fill: var(--bg); stroke: var(--border); }}
     .pt {{ fill: var(--ink2); font-size: 11.5px; }}
     @keyframes in {{ to {{ opacity: 1; }} }}
@@ -342,9 +352,41 @@ def stack(today):
   <text class="h" x="520" y="34">What I build with</text>
   {"".join(arcs)}
   <text class="num" x="{cx}" y="{cy + 4}" text-anchor="middle">{total / 1e6:.1f}M</text>
-  <text class="ax" x="{cx}" y="{cy + 22}" text-anchor="middle">lines of code</text>
+  <text class="ax" x="{cx}" y="{cy + 22}" text-anchor="middle">lines this year</text>
   {"".join(legend)}
   {"".join(pills)}
-  <text class="ax" x="24" y="252">Lines added in my Astorie commits, from git (Nov 2026)</text>
+  <text class="ax" x="24" y="252">Lines added this year · Astorie from git, Adsgency AI (600K+) self-reported · Nov 2026</text>
+</svg>
+"""
+
+
+# ---------------------------------------------------------------- highlights
+
+def highlights(year_total, today):
+    lines = sum(n for _, n, _ in LANGUAGES)
+    tiles = [(f"{lines / 1e6:.1f}M+", "lines of code this year"), (FEATURES, "features shipped"),
+             (f"{year_total / 1000:.1f}K", "contributions in 12 months"), (f"{PRS_MERGED:,}", "PRs merged at Astorie")]
+    body = []
+    for i, (big, small) in enumerate(tiles):
+        x = 24 + i * 204
+        body.append(f'<g class="tile" style="animation-delay:{0.15 + i * 0.15:.2f}s">'
+                    f'<rect class="card" x="{x}" y="20" width="188" height="104" rx="10"/>'
+                    f'<rect class="bar k{i}" x="{x}" y="20" width="4" height="104" rx="2"/>'
+                    f'<text class="big" x="{x + 20}" y="74">{big}</text>'
+                    f'<text class="lbl" x="{x + 20}" y="100">{small}</text></g>')
+    light = "--k0:#2f6fde; --k1:#c2477f; --k2:#1fa3a3; --k3:#7a5af5; --card:#f6f8fa;"
+    dark = "--k0:#4c8df6; --k1:#d0578f; --k2:#22a5a5; --k3:#8a6ff0; --card:#161b22;"
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="840" height="144" viewBox="0 0 840 144" role="img" aria-labelledby="ht hd">
+  <title id="ht">Highlights</title>
+  <desc id="hd">{"; ".join(f"{b} {s}" for b, s in tiles)}.</desc>
+  <style>{THEMED.format(light=light, dark=dark)}
+    .card {{ fill: var(--card); stroke: var(--border); }}
+    .big {{ fill: var(--ink); font-size: 30px; font-weight: 700; }}
+    .k0 {{ fill: var(--k0); }} .k1 {{ fill: var(--k1); }} .k2 {{ fill: var(--k2); }} .k3 {{ fill: var(--k3); }}
+    .tile {{ animation: up .6s cubic-bezier(.2,.8,.3,1) both; }}
+    @keyframes up {{ from {{ opacity: 0; transform: translateY(12px); }} to {{ opacity: 1; transform: none; }} }}
+    @media (prefers-reduced-motion: reduce) {{ .tile {{ animation: none; }} }}
+  </style>
+  {"".join(body)}
 </svg>
 """
