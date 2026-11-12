@@ -29,6 +29,15 @@ def calendar(login, start, end):
     return {dt.date.fromisoformat(d["date"]): d["contributionCount"] for w in weeks for d in w["contributionDays"]}
 
 
+def merged_prs(login, token):
+    """Merged-PR count for login; the token must see private repos (STATS_TOKEN, repo scope)."""
+    query = 'query($q:String!){search(query:$q,type:ISSUE){issueCount}}'
+    body = json.dumps({"query": query, "variables": {"q": f"author:{login} is:pr is:merged"}}).encode()
+    req = urllib.request.Request("https://api.github.com/graphql", body, {
+        "Authorization": f"bearer {token}", "Content-Type": "application/json"})
+    return json.load(urllib.request.urlopen(req))["data"]["search"]["issueCount"]
+
+
 def work_days(today):
     # ponytail: one query per year-long window; fine for a handful of years.
     days, start = {}, WORK_START
@@ -134,6 +143,8 @@ def main():
                     best[d], owner[d] = c, key
     year = {d: c for d, c in totals.items() if d > today - dt.timedelta(days=365)}
 
+    token = os.environ.get("STATS_TOKEN")
+    prs = merged_prs(WORK_LOGIN, token) if token else 927  # 927 = last hand-counted value, Nov 2026
     images = {  # file name -> (svg, alt text), in README order
         "terminal.svg": (scenes.terminal(year, 3, today), "Terminal: whoami, contributions in the last year, current focus"),
         "highlights.svg": (scenes.highlights(sum(year.values()), today), "Highlights: 200K+ users and 1.8M+ AI generations at Astorie, 150+ businesses and $50M+ ad spend at AdsGency AI, 1.6M+ lines of code and 100+ features shipped"),
@@ -163,7 +174,7 @@ def main():
         img("astorie-stats.svg"),
         f'<img src="{raw}/startup-stats.svg?v=3" alt="Before Astorie at Adsgency AI, Nov 2025 to Jun 2026: '
         f'5,043 contributions over 158 active days" width="100%">',
-        "This year: **1.6M+ lines of code** (1.0M at Astorie, 600K+ at Adsgency AI) · **100+ features shipped** · at Astorie **4,600+ commits** and **927 PRs merged** (Nov 2026).",
+        f"This year: **1.6M+ lines of code** (1.0M at Astorie, 600K+ at Adsgency AI) · **100+ features shipped** · at Astorie **4,600+ commits** and **{prs:,} PRs merged** ({today:%b %Y}), plus **1,011 PRs merged** at Adsgency AI.",
         "</details>",
         f"_Updated daily · last run {today:%b} {today.day}, {today.year}_",
     ])
