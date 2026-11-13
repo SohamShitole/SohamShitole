@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="390" viewBox="0 0 840 390" role="img" aria-labelledby="tt td">
+  <title id="tt">Terminal: about Soham</title>
+  <desc id="td">whoami Soham Shitole · software engineer @ Astorie · San Francisco contributions --last-year --all-accounts 12,997 across 3 accounts · 31-day best streak · 897 on Oct 16 cat now.txt Building AI agents that drive a visual canvas for images, video and audio cat stack.txt languages  TypeScript · Python · SQL ai         LangGraph · LangChain · OpenAI · Anthropic · Vercel AI SDK · MCP web        React · Next.js · Node.js data/infra Postgres · Supabase · Drizzle · Railway · Vercel</desc>
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 14px; }
+    .p { fill: #3fb950; font-weight: 700; } .c { fill: #e6edf3; animation: type 1s both; }
+    .o { fill: #9198a1; animation: show .01s both; } .p.o { fill: #3fb950; }
+    .cur { fill: #e6edf3; animation: show .01s both, blink 1s steps(1) infinite; }
+    @keyframes type { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+    @keyframes show { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes blink { 50% { fill-opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect x="0.5" y="0.5" width="839" height="389" rx="10" fill="#0d1117" stroke="#30363d"/>
+  <path d="M0.5 32 V10.5 a10 10 0 0 1 10 -10 H829.5 a10 10 0 0 1 10 10 V32 Z" fill="#161b22"/>
+  <circle cx="22" cy="16" r="6" fill="#ff5f57"/><circle cx="42" cy="16" r="6" fill="#febc2e"/><circle cx="62" cy="16" r="6" fill="#28c840"/>
+  <text x="420" y="21" text-anchor="middle" style="font-size:12px;fill:#6e7681">soham@astorie: ~</text>
+  <text class="p" x="24" y="76">$</text><text class="c" x="40" y="76" style="animation-delay:0.40s;animation-duration:0.44s;animation-timing-function:steps(7,jump-none)">whoami</text><text class="o" x="40" y="100" style="animation-delay:1.09s;white-space:pre">Soham Shitole · software engineer @ Astorie · San Francisco</text><text class="p" x="24" y="132">$</text><text class="c" x="40" y="132" style="animation-delay:1.44s;animation-duration:1.80s;animation-timing-function:steps(41,jump-none)">contributions --last-year --all-accounts</text><text class="o" x="40" y="156" style="animation-delay:3.49s;white-space:pre">12,997 across 3 accounts · 31-day best streak · 897 on Oct 16</text><text class="p" x="24" y="188">$</text><text class="c" x="40" y="188" style="animation-delay:3.84s;animation-duration:0.64s;animation-timing-function:steps(12,jump-none)">cat now.txt</text><text class="o" x="40" y="212" style="animation-delay:4.73s;white-space:pre">Building AI agents that drive a visual canvas for images, video and audio</text><text class="p" x="24" y="244">$</text><text class="c" x="40" y="244" style="animation-delay:5.08s;animation-duration:0.72s;animation-timing-function:steps(14,jump-none)">cat stack.txt</text><text class="o" x="40" y="268" style="animation-delay:6.05s;white-space:pre">languages  TypeScript · Python · SQL</text><text class="o" x="40" y="288" style="animation-delay:6.25s;white-space:pre">ai         LangGraph · LangChain · OpenAI · Anthropic · Vercel AI SDK · MCP</text><text class="o" x="40" y="308" style="animation-delay:6.45s;white-space:pre">web        React · Next.js · Node.js</text><text class="o" x="40" y="328" style="animation-delay:6.65s;white-space:pre">data/infra Postgres · Supabase · Drizzle · Railway · Vercel</text><text class="p o" x="24" y="360" style="animation-delay:7.00s">$</text><rect class="cur" x="40" y="347" width="9" height="17" style="animation-delay:7.00s,7.00s"/>
+</svg>

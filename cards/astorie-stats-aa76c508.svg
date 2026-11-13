@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="840" height="300" viewBox="0 0 840 300" role="img" aria-labelledby="t d">
   <title id="t">Work at Astorie: Jul 2026 – Nov 2026</title>
-  <desc id="d">7,670 contributions over 105 active days. Current streak 18 days, longest 18 days.</desc>
+  <desc id="d">7,922 contributions over 106 active days. Current streak 19 days, longest 19 days.</desc>
   <style>
     :root { --bg:#ffffff; --border:#d0d7de; --ink:#1f2328; --ink2:#59636e; --muted:#818b98; --grid:#eaeef2; --bar:#2f6fde; }
     @media (prefers-color-scheme: dark) {
@@ -21,16 +21,16 @@
   <text class="h" x="24" y="36">Work at Astorie</text>
   <text class="sub" x="24" y="55">Jul 2026 – Nov 2026 · private repos, as @soham406 · updated daily</text>
   <g transform="translate(24,92)">
-    <text class="num" x="0" y="0">7,670</text><text class="lbl" x="0" y="20">contributions</text>
-    <text class="num" x="150" y="0">105</text><text class="lbl" x="150" y="20">active days</text>
-    <text class="num" x="0" y="66">18</text><text class="lbl" x="0" y="86">day current streak</text>
-    <text class="num" x="150" y="66">18</text><text class="lbl" x="150" y="86">day longest streak</text>
+    <text class="num" x="0" y="0">7,922</text><text class="lbl" x="0" y="20">contributions</text>
+    <text class="num" x="150" y="0">106</text><text class="lbl" x="150" y="20">active days</text>
+    <text class="num" x="0" y="66">19</text><text class="lbl" x="0" y="86">day current streak</text>
+    <text class="num" x="150" y="66">19</text><text class="lbl" x="150" y="86">day longest streak</text>
     <text class="sub" x="0" y="140">Contributions = commits, PRs, reviews and issues</text>
   </g>
   <text class="lbl" x="440" y="36">Contributions per month</text>
   <line class="grid" x1="440" y1="250" x2="816" y2="250"/>
   <line class="grid" x1="440" y1="209.5" x2="816" y2="209.5"/><text class="ax" x="816" y="205.5" style="text-anchor:end">1,000</text><line class="grid" x1="440" y1="169.0" x2="816" y2="169.0"/><text class="ax" x="816" y="165.0" style="text-anchor:end">2,000</text><line class="grid" x1="440" y1="128.5" x2="816" y2="128.5"/><text class="ax" x="816" y="124.5" style="text-anchor:end">3,000</text>
-  <path class="bar" d="M452 250 V242.6 a4 4 0 0 1 4 -4 h32 a4 4 0 0 1 4 4 V250 Z"/><path class="bar" d="M512 250 V227.1 a4 4 0 0 1 4 -4 h32 a4 4 0 0 1 4 4 V250 Z"/><path class="bar" d="M572 250 V196.2 a4 4 0 0 1 4 -4 h32 a4 4 0 0 1 4 4 V250 Z"/><path class="bar" d="M632 250 V94.0 a4 4 0 0 1 4 -4 h32 a4 4 0 0 1 4 4 V250 Z"/><path class="bar" d="M692 250 V199.5 a4 4 0 0 1 4 -4 h32 a4 4 0 0 1 4 4 V250 Z"/>
-  <text class="val" x="472.0" y="232.6">282</text><text class="ax" x="472.0" y="268">Jul</text><text class="val" x="532.0" y="217.1">665</text><text class="ax" x="532.0" y="268">Aug</text><text class="val" x="592.0" y="186.2">1,427</text><text class="ax" x="592.0" y="268">Sep</text><text class="val" x="652.0" y="84.0">3,951</text><text class="ax" x="652.0" y="268">Oct</text><text class="val" x="712.0" y="189.5">1,345</text><text class="ax" x="712.0" y="268">Nov*</text>
+  <path class="bar" d="M452 250 V242.6 a4 4 0 0 1 4 -4 h32 a4 4 0 0 1 4 4 V250 Z"/><path class="bar" d="M512 250 V227.1 a4 4 0 0 1 4 -4 h32 a4 4 0 0 1 4 4 V250 Z"/><path class="bar" d="M572 250 V196.2 a4 4 0 0 1 4 -4 h32 a4 4 0 0 1 4 4 V250 Z"/><path class="bar" d="M632 250 V94.0 a4 4 0 0 1 4 -4 h32 a4 4 0 0 1 4 4 V250 Z"/><path class="bar" d="M692 250 V189.3 a4 4 0 0 1 4 -4 h32 a4 4 0 0 1 4 4 V250 Z"/>
+  <text class="val" x="472.0" y="232.6">282</text><text class="ax" x="472.0" y="268">Jul</text><text class="val" x="532.0" y="217.1">665</text><text class="ax" x="532.0" y="268">Aug</text><text class="val" x="592.0" y="186.2">1,427</text><text class="ax" x="592.0" y="268">Sep</text><text class="val" x="652.0" y="84.0">3,951</text><text class="ax" x="652.0" y="268">Oct</text><text class="val" x="712.0" y="179.3">1,597</text><text class="ax" x="712.0" y="268">Nov*</text>
   <text class="ax" x="816" y="288" style="text-anchor:end">*Nov to date (Nov 13)</text>
 </svg>
