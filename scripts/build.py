@@ -147,7 +147,7 @@ def main():
     prs = merged_prs(WORK_LOGIN, token) if token else 927  # 927 = last hand-counted value, Nov 2026
     images = {  # file name -> (svg, alt text), in README order
         "terminal.svg": (scenes.terminal(year, 3, today), "Terminal: whoami, contributions in the last year, current focus"),
-        "highlights.svg": (scenes.highlights(sum(year.values()), today), "Highlights: 200K+ users and 1.8M+ AI generations at Astorie, 150+ businesses and $50M+ ad spend at AdsGency AI, 1.6M+ lines of code and 100+ features shipped"),
+        "highlights.svg": (scenes.highlights(sum(year.values()), today, prs), "Highlights: 200K+ users and 1.8M+ AI generations at Astorie, 150+ businesses and $50M+ ad spend at AdsGency AI, 1.6M+ lines of code and 100+ features shipped"),
         "city.svg": (scenes.city(totals, owner, today), "Contribution city: one building per day over the last 12 months"),
         "timeline.svg": (scenes.timeline({"g": adsgency, "a": days}, today), "Career timeline: Adsgency AI, then Astorie"),
         "stack.svg": (scenes.stack(today), "Languages I write and the stack I build with"),

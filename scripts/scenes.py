@@ -367,12 +367,12 @@ def stack(today):
 
 # ---------------------------------------------------------------- highlights
 
-def highlights(year_total, today):
+def highlights(year_total, today, prs=PRS_MERGED):
     lines = sum(n for _, n, _ in LANGUAGES)
     output = [(f"{lines / 1e6:.1f}M+", "lines of code this year", "Astorie + AdsGency AI"),
               (FEATURES, "features shipped", "Astorie + AdsGency AI"),
               (f"{year_total / 1000:.1f}K", "contributions in 12 months", "all GitHub accounts"),
-              (f"{PRS_MERGED:,}", "PRs merged", "Astorie")]
+              (f"{prs:,}", "PRs merged", "Astorie")]
     rows = [("Scale of what I build on", IMPACT), ("What I ship", output)]
     tiles = [t for _, row in rows for t in row]
     body = []
