@@ -12,7 +12,8 @@ MONO = 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace'
 LANGUAGES = [("TypeScript", 794_408, "ts"), ("React (TSX)", 137_115, "tsx"), ("SQL", 60_051, "sql"),
              ("Python (Adsgency AI)", 600_000, "py"), ("Shell", 13_041, "sh"), ("Other", 11_461, "oth")]
 FEATURES = "100+"
-PRS_MERGED = 927  # Astorie, GitHub search, Nov 10 2026
+PRS_MERGED = 927  # Astorie fallback when STATS_TOKEN is missing (Nov 10 2026)
+ADSGENCY_PRS = 1011  # @sohamshitole-mldev, private repos, job ended Jun 2026
 # Product scale (Nov 2026). Astorie: app DB auth.users (211K) + PostHog generation:started since Jun 9 2026.
 # AdsGency AI: the company's own homepage claims (adsgency.ai).
 IMPACT = [("200K+", "users on the platform", "Astorie"), ("1.8M+", "AI generations run", "Astorie"),
@@ -372,7 +373,7 @@ def highlights(year_total, today, prs=PRS_MERGED):
     output = [(f"{lines / 1e6:.1f}M+", "lines of code this year", "Astorie + AdsGency AI"),
               (FEATURES, "features shipped", "Astorie + AdsGency AI"),
               (f"{year_total / 1000:.1f}K", "contributions in 12 months", "all GitHub accounts"),
-              (f"{prs:,}", "PRs merged", "Astorie")]
+              (f"{prs + ADSGENCY_PRS:,}", "PRs merged", "Astorie + AdsGency AI")]
     rows = [("Scale of what I build on", IMPACT), ("What I ship", output)]
     tiles = [t for _, row in rows for t in row]
     body = []

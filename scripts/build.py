@@ -174,7 +174,7 @@ def main():
         img("astorie-stats.svg"),
         f'<img src="{raw}/startup-stats.svg?v=3" alt="Before Astorie at Adsgency AI, Nov 2025 to Jun 2026: '
         f'5,043 contributions over 158 active days" width="100%">',
-        f"This year: **1.6M+ lines of code** (1.0M at Astorie, 600K+ at Adsgency AI) · **100+ features shipped** · at Astorie **4,600+ commits** and **{prs:,} PRs merged** ({today:%b %Y}), plus **1,011 PRs merged** at Adsgency AI.",
+        f"This year: **1.6M+ lines of code** (1.0M at Astorie, 600K+ at Adsgency AI) · **100+ features shipped** · at Astorie **4,600+ commits** and **{prs:,} PRs merged** ({today:%b %Y}), plus **{scenes.ADSGENCY_PRS:,} PRs merged** at Adsgency AI.",
         "</details>",
         f"_Updated daily · last run {today:%b} {today.day}, {today.year}_",
     ])
