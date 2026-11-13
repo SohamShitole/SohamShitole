@@ -5,7 +5,7 @@ Software engineer at [Astorie](https://astorie.ai), working on AI agents, creati
 <!-- STATS:START -->
 <img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/cards/terminal-00e4909f.svg" alt="Terminal: whoami, contributions in the last year, current focus" width="100%">
 
-<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/cards/highlights-59653380.svg" alt="Highlights: 200K+ users and 1.8M+ AI generations at Astorie, 150+ businesses and $50M+ ad spend at AdsGency AI, 1.6M+ lines of code and 100+ features shipped" width="100%">
+<img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/cards/highlights-b5fdd4d0.svg" alt="Highlights: 200K+ users and 1.8M+ AI generations at Astorie, 150+ businesses and $50M+ ad spend at AdsGency AI, 1.6M+ lines of code and 100+ features shipped" width="100%">
 
 <img src="https://raw.githubusercontent.com/SohamShitole/SohamShitole/main/cards/city-4e431678.svg" alt="Contribution city: one building per day over the last 12 months" width="100%">
 
